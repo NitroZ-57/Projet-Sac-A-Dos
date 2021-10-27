@@ -7,6 +7,8 @@ Pour se faire nous allons utiliser 3 approches différentes :
 * Une utilisant des tableaux dynamiques statiques
 * Une utilisant des listes dynamiques dynamique
 
+--------------------------------------------------
+
 ## TODO
 - [ ] : Faire les fonctions pour le sac dans *objects.h* et *objects.c*
 - [ ] : Faire les fonctions dont dépendent les fonctions récursives *dep_rec.h* et *dep_rec.c*
