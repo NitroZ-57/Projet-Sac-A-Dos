@@ -12,8 +12,8 @@
 # Informations sur le code 
 
 ## Makefile
-Le Makefile est finit et fonctionnel, il ne faut pas le modifier. Ne pas oublier de supprimer les fichiers obj et bin avant d'envoyer sur github.
-Commandes :
+Le Makefile est finit et fonctionnel, il ne faut pas le modifier. Ne pas oublier de supprimer les fichiers obj et bin avant d'envoyer sur github.  
+Commandes :  
     - **make** compile et éxécute le programme
     - **make delete** supprime les fichiers obj et bin
 
