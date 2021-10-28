@@ -20,6 +20,9 @@ Pour se faire nous allons utiliser 3 approches différentes :
 
 ## Informations sur le code 
 
+### .gitignore
+Mettre dans tous les fichiers ou dossiers qui ne doivent pas être envoyés sur github
+
 ### Makefile
 Le Makefile est finit et fonctionnel, il ne faut pas le modifier. Ne pas oublier de supprimer les fichiers obj et bin avant d'envoyer sur github.  
 Commandes :  
