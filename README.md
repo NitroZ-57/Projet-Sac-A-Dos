@@ -16,16 +16,7 @@ Pour se faire nous allons utiliser 3 approches différentes :
 - [ ] : Faire les fonctions dont dépendent les fonctions de tableau dynamique statique `dep_array.h` et `dep_array.c`
 - [ ] : Faire la fonction de tableau dynamique statique `array.h` et `array.h`
 
---------------------------------------------------
-
-## Information sur les branches
-Chacunes des trois parties sera faite sur une branche. Il n'aura plus qu'à les fusionner une fois finie avec `git merge`.
-3 branches :  
-    - **recursive** : pour la manière récursive  
-    - **array** : pour la manière tableau dynamique statique  
-    - **list** pour la manière liste dynamique dynamique  
-
---------------------------------------------------
+ -------------------------------------------------
 
 ## Informations sur le code 
 
