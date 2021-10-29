@@ -20,10 +20,10 @@ Pour se faire nous allons utiliser 3 approches différentes :
 
 ## Information sur les branches
 Chacunes des trois parties sera faite sur une branche. Il n'aura plus qu'à les fusionner une fois finie avec `git merge`.
-3 branches :
-    - **recursive** : pour la manière récursive
-    - **array** : pour la manière tableau dynamique statique
-    - **list** pour la manière liste dynamique dynamique
+3 branches :  
+    - **recursive** : pour la manière récursive  
+    - **array** : pour la manière tableau dynamique statique  
+    - **list** pour la manière liste dynamique dynamique  
 
 --------------------------------------------------
 
