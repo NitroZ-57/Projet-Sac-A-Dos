@@ -1,4 +1,5 @@
 # Projet-Sac-A-Dos
+Par COMTE Quentin & ZELL Camille
 
 ## Pricipe du projet
 Un algorithme ayant pour but de ranger plusieurs objets donnés dans un sac. On a la taille du sac à ne pas dépasser ainsi que des informations sur les obejts tel que leur taille et leur utilité. Notre but sera d'avoir le sac ayant l'utilité la plus forte sans dépasser sa capacité maximale.  
@@ -9,14 +10,30 @@ Pour se faire nous allons utiliser 3 approches différentes :
 
 --------------------------------------------------
 
+## Question au prof
+1. Pour les objets est-ce que l'on doit faire des variables dynamiques ? Si oui, on libère quand la mémoire ?   
+
+2. Dans les boucles pour dans la fonction pour créer les objets, doit-on commencer par 4 plutot que 3 pour commencer à ranger les objets car 0 est le nom de la fonction, 1 la méthode à effectuer, 2 si on a ou non une utilité et le 3 le volume maximum du sac ?  
+
+--------------------------------------------------
+
 ## TODO
-- [ ] : Faire les fonctions pour le sac dans `objects.h` et `objects.c`
+- [X] : Faire les fonctions pour le sac dans `objects.h` et `objects.c`
 - [ ] : Faire les fonctions dont dépendent les fonctions récursives `dep_rec.h` et `dep_rec.c`
 - [ ] : Faire la fonction récursive `rec.h` et `rec.h`
 - [ ] : Faire les fonctions dont dépendent les fonctions de tableau dynamique statique `dep_array.h` et `dep_array.c`
 - [ ] : Faire la fonction de tableau dynamique statique `array.h` et `array.h`
 
- -------------------------------------------------
+--------------------------------------------------
+
+## TO TEST
+- [ ] : Tester les fonctions pour le sac dans `objects.h` et `objects.c`
+- [ ] : TESTER les fonctions dont dépendent les fonctions récursives `dep_rec.h` et `dep_rec.c`
+- [ ] : Tester la fonction récursive `rec.h` et `rec.h`
+- [ ] : Tester les fonctions dont dépendent les fonctions de tableau dynamique statique `dep_array.h` et `dep_array.c`
+- [ ] : Tester la fonction de tableau dynamique statique `array.h` et `array.h`
+
+--------------------------------------------------
 
 ## Informations sur le code 
 
