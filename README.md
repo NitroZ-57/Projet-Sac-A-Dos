@@ -83,7 +83,7 @@ Ces fichiers contiennent la fonction tableau dynamique statique, étape 2 du pro
 ## Tableau des fonction du programme
 
 | NOM FONCTION  | NOM FICHIER | LIGNE .h | UTILITÉ | ETAT |
-|:------:|:------:|:------:|:------:|:------:|
+|:---------:|:---------:|:---------:|:---------:|:---------:|
 |`array()`|*array*|16|cherche la meilleure solution pour le sac et l'affiche|prof|
 |`free_states_array()`|*dp_array*|18|libère la mémoire de la matrice d'état|a faire|
 |`new_states_array()`|*dp_array*|29|crée une matrice d'état initialisée a 0|a faire|
