@@ -68,4 +68,9 @@ Ces fichiers contiennent toutes les fonctions utilitaire pour la version tableau
 Ces fichiers contiennent la fonction tableau dynamique statique, étape 2 du projet.  
 
 
-prout
+| NOM FONCTION  | NOM FICHIER | LIGNE .h | UTILITÉ | ETAT |
+|:------:|:------:|:------:|:------:|:------:|
+|Ligne 1|Ligne 1|
+|Colonne 1 ligne 2| colonne 2 ligne 2|
+| Etc... ||
+| Etc...| La ligne du dessus est vide|
