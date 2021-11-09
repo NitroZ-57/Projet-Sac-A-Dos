@@ -101,4 +101,4 @@ Ces fichiers contiennent la fonction tableau dynamique statique, étape 2 du pro
 |`new_objects()`|*objects*|39|crée un set d'objet|prof|
 |`view_object()`|*objects*|48|affiche un objet|prof|
 |`view_object_set()`|*objects*|57|affiche un set d'objet|prof|
-|`rec()`|*rec*|16|fonction pour recursife = trouve meilleure solution et affiche a chaque appel|a faire|
+|`rec()`|*rec*|16|fonction pour recursive = trouve meilleure solution et affiche a chaque appel|a faire|
