@@ -5,8 +5,19 @@ Par COMTE Quentin & ZELL Camille
 Un algorithme ayant pour but de ranger plusieurs objets donnés dans un sac. On a la taille du sac à ne pas dépasser ainsi que des informations sur les obejts tel que leur taille et leur utilité. Notre but sera d'avoir le sac ayant l'utilité la plus forte sans dépasser sa capacité maximale.  
 Pour se faire nous allons utiliser 3 approches différentes :   
 * Une récursive
-* Une utilisant des tableaux dynamiques statiques
-* Une utilisant des listes dynamiques dynamique
+* Une utilisant des matrices d'états
+* Une utilisant des listes gérériques doublement chaîner 
+
+------------------------------------------------------------------
+
+## Utilisation du programme
+Pour lancer le programme un fait appel au fichier executable (éxecuter par le makefile) qui est :
+    *./nom_programme méthode utilité Volume_max obj_1 ... obj_n*
+* Le nom du programme est le programme que l'on souhaite exécuter. 
+* méthode est soit `R` pour appeler le programme en récurssif, `A` pour appelé la méthode utilisant les matrices d'états et `L` pour appeler la méthode utilisant les listes générique doublement chaîner ; Si il y a une autre valeur un message d'erreur apparaît.
+* Utilité va prendre la valeur 0 ou 1 (valeur booléenne). 0 correspond au fait que l'objet a un volume et une utilité identique . 1 correspond au fait que les objets seront selectionner par paire ; la première valeur correspond au volume et la seconde a l'utilité. Lorsque l'utilité est de 0 il y a n objets, lorsque l'utilité est de 1 il y a n/2 objets.
+* Volume_max est le volume du sac.
+* obj_1 ... obj_n on écrit les objet sous forme d'entier. On peux écrire de 1 à n objet différent.
 
 --------------------------------------------------
 
@@ -80,7 +91,7 @@ Ces fichiers contiennent la fonction tableau dynamique statique, étape 2 du pro
 |`view_path_array()`|*dp_array*|50|affiche la meilleure solution optimiser|prof|
 |`view_opt()`|*dp_array*|59|affiche la matrice d'état|prof|
 |`view_chm()`|*dp_array*|68|affiche "the path" de la matrice d'état|prof|
-|`ìnit_opt_chm()`|*dp_array_*|131|prout|a faire|
+|`ìnit_opt_chm()`|*dp_array_*|131 (fichier c)|prout|a faire|
 |`new_bag()`|*dp_rec*|20|crée un nouveau sac et l'initialise a 0|a faire|
 |`bagcpy()`|*dp_rec*|30|copie un sac dans un autre|prof|
 |`free_bag()`|*dp_rec*|39|libère la mémoire d'un sac|a faire|
