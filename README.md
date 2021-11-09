@@ -67,10 +67,27 @@ Ces fichiers contiennent toutes les fonctions utilitaire pour la version tableau
 ### Fichiers array.c et array.h
 Ces fichiers contiennent la fonction tableau dynamique statique, étape 2 du projet.  
 
+---------------------------------------------------------
+
+## Tableau des fonction du programme
 
 | NOM FONCTION  | NOM FICHIER | LIGNE .h | UTILITÉ | ETAT |
 |:------:|:------:|:------:|:------:|:------:|
-|Ligne 1|Ligne 1|
-|Colonne 1 ligne 2| colonne 2 ligne 2|
-| Etc... ||
+|array|array|16|cherche la meilleure solution pour le sac et l'affiche|?|
+|free_states_array|dp_array|18|libère la mémoire de la matrice d'état|?|
+|new_states_array|dp_array|29|crée une matrice d'état initialisée a 0|?|
+|push_object_in_array|dp_array|40|ajoute un objet valide dans la matrice d'état|?|
+|view_path_array|dp_array|50|affiche la meilleure solution optimiser|?|
+|view_opt|dp_array|59|affiche la matrice d'état|?|
+|view_chm|dp_array|68|affiche "the path" de la matrice d'état|?|
+|new_bag|dp_rec|20|crée un nouveau sac et l'initialise a 0|?|
+|bagcpy|dp_rec|30|copie un sac dans un autre|?|
+|free_bag|dp_rec|39|libère la mémoire d'un sac|?|
+|clean_bag|dp_rec|48|enlève tout les objet du sac|?|
+|push_object_in_bag|dp_rec|58|ajoute un objet au sac|?|
+|view_bagpack|dp_rec|68|affiche un sac|?|
+|new_objects|objects|39|crée un set d'objet|?|
+|view_object|objects|48|affiche un objet|
+|view_objet_set|objects|57|affiche un set d'objet|?|
+|red|rec|16|fonction pour recursife = trouve meilleure solution et affiche a chaque appel|?|
 | Etc...| La ligne du dessus est vide|
