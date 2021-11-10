@@ -22,9 +22,15 @@ Pour lancer le programme un fait appel au fichier executable (éxecuter par le m
 --------------------------------------------------
 
 ## Question au prof
-1. Pour les objets est-ce que l'on doit faire des variables dynamiques ? Si oui, on libère quand la mémoire ?   
+1. Pour les objets est-ce que l'on doit faire des variables dynamiques ?
+**répondu**  
 
 2. Dans les boucles pour dans la fonction pour créer les objets, doit-on commencer par 4 plutot que 3 pour commencer à ranger les objets car 0 est le nom de la fonction, 1 la méthode à effectuer, 2 si on a ou non une utilité et le 3 le volume maximum du sac ?  
+**répondu : il faut mettre à 4**  
+
+3. Le nom des fichiers qui doivent à tout prix être là doit être le même que précisé ? Et doivent-t-il comportés les mêmes fonctions que ce que vous nous avez envoyé ?
+
+4. Où doit-on libérer la mémoire des `object_t`et `objects_t` on doit faire la fonction nous même ?
 
 --------------------------------------------------
 
@@ -98,7 +104,7 @@ Ces fichiers contiennent la fonction tableau dynamique statique, étape 2 du pro
 |`clean_bag()`|*dp_rec*|48|enlève tout les objet du sac|a faire|
 |`push_object_in_bag()`|*dp_rec*|58|ajoute un objet au sac|a faire|
 |`view_bagpack()`|*dp_rec*|68|affiche un sac|prof|
-|`new_objects()`|*objects*|39|crée un set d'objet|prof|
+|`new_objects()`|*objects*|39|crée un set d'objet|a testé|
 |`view_object()`|*objects*|48|affiche un objet|prof|
 |`view_object_set()`|*objects*|57|affiche un set d'objet|prof|
 |`rec()`|*rec*|16|fonction pour recursive = trouve meilleure solution et affiche a chaque appel|a faire|

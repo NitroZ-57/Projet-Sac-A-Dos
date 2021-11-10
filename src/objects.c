@@ -14,12 +14,12 @@ struct objects_t * new_objects(const int argc, char ** argv, bool utility) {
     assert(set);
     if(utility) {
         int j;
-        for(i = 3, j = 0; i < argc; i += 2, j += 1) { 
+        for(i = 4, j = 0; i < argc; i += 2, j += 1) { 
         	set->objects[j].volume = atoi(argv[i]); 
             set->objects[j].utility = atoi(argv[i+1]); 
         }
     } else {
-        for(i = 3; i < argc; i += 1) {
+        for(i = 4; i < argc; i += 1) {
         	set->objects[i-3].volume = atoi(argv[i]);
             set->objects[i-3].utility = atoi(argv[i]);
         }
