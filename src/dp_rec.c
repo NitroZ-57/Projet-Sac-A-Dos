@@ -1,14 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
+#include <assert.h>
 #include "dp_rec.h"
 #include "objects.h"
 
 
 struct retained_t * new_bag() {
-	struct retained_t * bagpack = /** @todo */;
+	struct retained_t * bagpack = /** @todo */; // allocation dynamique d'un struct retained_t
 	assert(bagpack);
-	bagpack->objects_list = /** @todo */;
+	bagpack->objects_list = /** @todo */; // à demander au prof
 	assert(bagpack->objects_list);
 	return bagpack;
 }
@@ -26,6 +27,7 @@ void bagcpy(struct retained_t * duplicata, const struct retained_t * bagpack) {
 void free_bag(struct retained_t * bagpack) {
 	assert(bagpack);
 	/** @todo **/
+	// libérer un à un les éléments de objects_list et mettre utilities_sum à 0, puis libérer le bagpack, enfin faire pointer le pointeur à NULL
 }
 
 // =======================================================================
@@ -33,11 +35,15 @@ void free_bag(struct retained_t * bagpack) {
 void clean_bag(struct retained_t * bagpack) {
 	assert(bagpack);
 	/** @todo **/
+	// enlever tous les éléments de objects_list en mettant les pointeurs à NULL un à un, et mettre la somme des utilités à 0
 }
 
 // =======================================================================
 
-void push_object_in_bag(struct retained_t * bagpack, struct object_t * ptr_object) { /** @todo **/ }
+void push_object_in_bag(struct retained_t * bagpack, struct object_t * ptr_object) { 
+	/** @todo **/
+	// ajoute le ptr_object à la suite de la liste objects_list et ajoute son utilité dans le utilities_sum
+}
 
 // =======================================================================
 

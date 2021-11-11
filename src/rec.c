@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
+#include <assert.h>
 #include "dp_rec.h"
 #include "rec.h"
 #include "objects.h"
@@ -23,7 +24,7 @@ void rec(const int Vmax, struct objects_t * object_set, struct retained_t * bagp
 			bagcpy(/** @todo */);
 			push_object_in_bag(/** @todo */);
 			object_set->first_idx = /** @todo */;
-			p_rec(/** @todo */);
+			rec(/** @todo */);
 			if(/** @todo */) {
 				clean_bag(/** @todo */);
 				bagcpy(/** @todo */);

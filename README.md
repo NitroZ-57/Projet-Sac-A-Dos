@@ -23,7 +23,7 @@ Pour lancer le programme un fait appel au fichier executable (éxecuter par le m
 
 ## Question au prof
 1. Pour les objets est-ce que l'on doit faire des variables dynamiques ?
-**répondu**  
+**répondu : oui**  
 
 2. Dans les boucles pour dans la fonction pour créer les objets, doit-on commencer par 4 plutot que 3 pour commencer à ranger les objets car 0 est le nom de la fonction, 1 la méthode à effectuer, 2 si on a ou non une utilité et le 3 le volume maximum du sac ?  
 **répondu : il faut mettre à 4**  
@@ -31,6 +31,10 @@ Pour lancer le programme un fait appel au fichier executable (éxecuter par le m
 3. Le nom des fichiers qui doivent à tout prix être là doit être le même que précisé ? Et doivent-t-il comportés les mêmes fonctions que ce que vous nous avez envoyé ?
 
 4. Où doit-on libérer la mémoire des `object_t`et `objects_t` on doit faire la fonction nous même ?
+
+5. A quoi correspond le type `struct list_t *` dans le type `struct retained_t`?  Car il est déclaré nulle part. Est-ce que c'est pas plutôt `objects_t`?
+
+6. C'est quoi `listcpy()`utilisé dans `bagcpy()` ? Elle est déclaré nulle part ? Et pareil pour `view_list()` utilisé dans `view_bagpack()` ?
 
 --------------------------------------------------
 
