@@ -23,7 +23,6 @@ int main(int argc, char **argv) {
 		const char mode = argv[1][0];
 		const bool utility = (atoi(argv[2]) == 0) ? false : true;
 		const int Vmax = atoi(argv[3]);
-		struct retained_t *retained_objects = new_bag();
 		struct objects_t * object_set = new_objects(argc, argv, utility);
 		
 		#ifdef _TRACE_

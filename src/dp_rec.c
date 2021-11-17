@@ -27,6 +27,11 @@ void bagcpy(struct retained_t * duplicata, const struct retained_t * bagpack) {
 void free_bag(struct retained_t * bagpack) {
 	assert(bagpack);
 	/** @todo **/
+
+
+	bagpack.utilities_sum = 0;
+	free (*bagpack);
+	(*bagpack) = NULL;
 	// libérer un à un les éléments de objects_list et mettre utilities_sum à 0, puis libérer le bagpack, enfin faire pointer le pointeur à NULL
 }
 
@@ -35,6 +40,8 @@ void free_bag(struct retained_t * bagpack) {
 void clean_bag(struct retained_t * bagpack) {
 	assert(bagpack);
 	/** @todo **/
+
+	bagpack.utilities_sum = 0;
 	// enlever tous les éléments de objects_list en mettant les pointeurs à NULL un à un, et mettre la somme des utilités à 0
 }
 
@@ -42,7 +49,12 @@ void clean_bag(struct retained_t * bagpack) {
 
 void push_object_in_bag(struct retained_t * bagpack, struct object_t * ptr_object) { 
 	/** @todo **/
-	// ajoute le ptr_object à la suite de la liste objects_list et ajoute son utilité dans le utilities_sum
+	//ajoute l'objet a la suite de la liste objects_list
+	assert(bagpack && ptr_object);
+	
+	//ajoute l'utilité de l'objet a l'utilité exitante du sac
+	bagpack.utilities_sum += ptr_object.utility ;
+
 }
 
 // =======================================================================
