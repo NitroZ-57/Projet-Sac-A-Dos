@@ -34,13 +34,13 @@ Pour lancer le programme un fait appel au fichier executable (éxecuter par le m
 4. Où doit-on libérer la mémoire des `object_t`et `objects_t` on doit faire la fonction nous même ?  
 **répondu : libérer les objects à la fin du main c'est à nous de faire les fonctions de libération dans `object.c`**
 
-5. A quoi correspond le type `struct list_t *` dans le type `struct retained_t`?  Car il est déclaré nulle part. Est-ce que c'est pas plutôt `objects_t`?  
+5. A quoi correspond le type `struct list_t *` dans le type `struct retained_t`?  Car il est déclaré nulle part. Est-ce que c'est pas plutôt `objects_t`?    
 **répondu : c'est à nous de faire les listes**
 
-6. C'est quoi `listcpy()`utilisé dans `bagcpy()` ? Elle est déclaré nulle part ? Et pareil pour `view_list()` utilisé dans `view_bagpack()` ?
+6. C'est quoi `listcpy()`utilisé dans `bagcpy()` ? Elle est déclaré nulle part ? Et pareil pour `view_list()` utilisé dans `view_bagpack()` ?  
 **répondu : à nous de faire aussi**
 
-7. Les constantes `UNDTR`et `INFTY` ne sont pas définies où sont elles ?
+7. Les constantes `UNDTR`et `INFTY` ne sont pas définies où sont elles ?  
 **répondu : il faut mettre dans `global.h` elles sont sur arche** 
 
 --------------------------------------------------
