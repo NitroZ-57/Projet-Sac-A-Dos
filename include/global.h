@@ -9,6 +9,6 @@
 #include "rec.h"
 #include "array.h"
 
-#define _TRACE_
+#define _TRACE_ 
 
 #endif

@@ -42,9 +42,9 @@ void push_object_in_array(struct states_array_t * states, const struct objects_t
     int OPT1 = states->OPT[pred];
     states->CHM[curr] = INFTY; //hyp.: l'object i n'est pas dans le sac
     if(/** @todo */) { // Il faut s'assurer qu'il y a de la place dans le sac
-      int pred_without_i = ;
-			int OPT2 = ;
-			if() { // Sélectionne la meilleur configuration 
+      int pred_without_i = /** @todo */;
+			int OPT2 = /** @todo */;
+			if(/** @todo */) { // Sélectionne la meilleur configuration 
 				states->OPT[curr] = /** @todo */;
 				states->CHM[curr] = /** @todo */; // Noter que l'object i est dans le sac
 			} else {
