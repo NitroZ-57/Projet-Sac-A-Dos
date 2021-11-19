@@ -45,15 +45,15 @@ void push_object_in_array(struct states_array_t * states, const struct objects_t
  		// Pour l'objet courant (i-1), parcourir chaque état du sac-à-dos
  		// Identifier cet état pour l'étape précédente (i-1)
  		// Identifier cet état pour l'étape courante (i)
-    int pred = 0/** @todo */;
-    int curr = 0/** @todo */;
+    int pred = 0/** @todo */; // valeur à la même colonne et la ligne du dessus
+    int curr = 0/** @todo */; // valeur à la même colonne et même ligne
     int OPT1 = states->OPT[pred];
     states->CHM[curr] = INFTY; //hyp.: l'object i n'est pas dans le sac
     if(0/** @todo */) { // Il faut s'assurer qu'il y a de la place dans le sac
-      int pred_without_i = 0/** @todo */;
-			int OPT2 = 0/** @todo */;
-			if(0/** @todo */) { // Sélectionne la meilleur configuration 
-				states->OPT[curr] = 0/** @todo */;
+      int pred_without_i = 0/** @todo */; // volume - volume de l'objet courrant
+			int OPT2 = 0/** @todo */; // ligne du dessus et voolume - volume de l'obejt courrant
+			if(0/** @todo */) { // Sélectionne le max entre OPT1 et OPT2
+				states->OPT[curr] = 0/** @todo */; 
 				states->CHM[curr] = 0/** @todo */; // Noter que l'object i est dans le sac
 			} else {
 				states->OPT[curr] = 0/** @todo */;
@@ -143,7 +143,7 @@ void init_opt_chm(struct states_array_t * states) {
 
     for( int obj = 1; obj <= states->num_obj; obj += 1) {
         for(int bag = 0; bag <= states->Vmax; bag += 1) {
-            int idx = obj*states->Vmax + bag;
+            int idx = obj*states->Vmax + bag; // trouver l'indice de où enregistrer une valeur dans un vecteur à partir de deux indices (ligne, colonne) d'une matrice d'état
             states->OPT[idx] = UNDTR;
             states->CHM[idx] = UNDTR;
         }
