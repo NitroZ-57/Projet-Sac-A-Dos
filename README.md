@@ -49,17 +49,17 @@ Pour lancer le programme un fait appel au fichier executable (éxecuter par le m
 - [X] : Faire les fonctions pour le sac dans `objects.h` et `objects.c`
 - [ ] : Faire les fonctions dont dépendent les fonctions récursives `dep_rec.h` et `dep_rec.c`
 - [x] : Faire la fonction récursive `rec.h` et `rec.c`
-- [ ] : Faire les fonctions dont dépendent les fonctions de tableau dynamique statique `dep_array.h` et `dep_array.c`
-- [ ] : Faire la fonction de tableau dynamique statique `array.h` et `array.c`
+- [X] : Faire les fonctions dont dépendent les fonctions de matrice d'états `dep_array.h` et `dep_array.c`
+- [ ] : Faire la fonction de matrice d'états `push_object_in_array()` dans `dp_array.h` et `dp_array.c`
 
 --------------------------------------------------
 
 ## TO TEST
 - [ ] : Tester les fonctions pour le sac dans `objects.h` et `objects.c`
-- [ ] : TESTER les fonctions dont dépendent les fonctions récursives `dep_rec.h` et `dep_rec.c`
+- [ ] : Tester les fonctions dont dépendent les fonctions récursives `dep_rec.h` et `dep_rec.c`
 - [ ] : Tester la fonction récursive `rec.h` et `rec.h`
-- [ ] : Tester les fonctions dont dépendent les fonctions de tableau dynamique statique `dep_array.h` et `dep_array.c`
-- [ ] : Tester la fonction de tableau dynamique statique `array.h` et `array.h`
+- [ ] : Tester les fonctions dont dépendent les fonctions de matrice d'états `dep_array.h` et `dep_array.c`
+- [ ] : Tester la fonction de matrice d'états `array.h` et `array.h`
 
 --------------------------------------------------
 
@@ -90,10 +90,10 @@ Ces fichiers contiennent toutes les fonctions utilitaire pour la version récurs
 Ces fichiers contiennent la fonction récursive, étape 1 du projet.  
 
 ### Fichiers dp_array.c et dp_array.h 
-Ces fichiers contiennent toutes les fonctions utilitaire pour la version tableau dynamique statique. Le fichier h sera inclu dans *array.c* qui contient la fonction tableau dynamique statique finale.  
+Ces fichiers contiennent toutes les fonctions utilitaire pour la version matrice d'états. Le fichier h sera inclu dans *array.c* qui contient la fonction matrice d'états finale.  
 
 ### Fichiers array.c et array.h
-Ces fichiers contiennent la fonction tableau dynamique statique, étape 2 du projet.  
+Ces fichiers contiennent la fonction matrice d'états, étape 2 du projet.  
 
 ---------------------------------------------------------
 
@@ -108,7 +108,7 @@ Ces fichiers contiennent la fonction tableau dynamique statique, étape 2 du pro
 |`view_path_array()`|*dp_array*|50|affiche la meilleure solution optimiser|prof|
 |`view_opt()`|*dp_array*|59|affiche la matrice d'état|prof|
 |`view_chm()`|*dp_array*|68|affiche "the path" de la matrice d'état|prof|
-|`ìnit_opt_chm()`|*dp_array_*|131 (fichier c)|prout|à faire|
+|`ìnit_opt_chm()`|*dp_array*|131 (fichier c)|initialise le chemin de la matrice d'état|à faire|
 |`new_bag()`|*dp_rec*|20|crée un nouveau sac et l'initialise a 0|à faire|
 |`bagcpy()`|*dp_rec*|30|copie un sac dans un autre|prof|
 |`free_bag()`|*dp_rec*|39|libère la mémoire d'un sac|à faire|

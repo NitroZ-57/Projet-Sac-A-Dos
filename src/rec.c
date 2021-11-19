@@ -30,10 +30,13 @@ void rec(const int Vmax, struct objects_t * object_set, struct retained_t * bagp
 				clean_bag(best_bagpack); // on enlève les éléments du meilleur sac
 				bagcpy(best_bagpack, bagpack); // on copie le nouveau meilleur sac dans le meilleur sac
 			}
+			#ifdef _TRACE_
+				view_bagpack(best_bagpack, "\nMeilleur bagpack :\n");
+			#endif
 		}
 	}
 	clean_bag(bagpack);
 	bagcpy(bagpack, best_bagpack);
-	free_bag(best_bagpack);
-	free_bag(duplicata);
+	free_bag(&best_bagpack);
+	free_bag(&duplicata);
 }

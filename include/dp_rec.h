@@ -38,7 +38,7 @@ void bagcpy(struct retained_t * newbagpack, const struct retained_t * bagpack);
  * 
  * @param bagpack the bag to free the memory
  */
-void free_bag(struct retained_t * bagpack);
+void free_bag(struct retained_t ** bagpack);
 
 // =======================================================================
 

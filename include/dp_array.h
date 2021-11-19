@@ -5,9 +5,9 @@
 typedef int state_t;
 
 struct states_array_t {
-  state_t * OPT;			// Matrice d'états proprement dite
-  state_t * CHM;			// Matrice des chemins dans la matrice d'états
-  int num_obj, Vmax;	// Dimensions de la matrice d'états
+	state_t * OPT;			// Matrice d'états proprement dite
+	state_t * CHM;			// Matrice des chemins dans la matrice d'états
+	int num_obj, Vmax;	// Dimensions de la matrice d'états
 };
 
 // =======================================================================
@@ -17,7 +17,7 @@ struct states_array_t {
  * 
  * @param states the array to free the memory
  */
-void free_states_array(struct states_array_t * states);
+void free_states_array(struct states_array_t ** states);
 
 // =======================================================================
 

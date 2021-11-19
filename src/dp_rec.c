@@ -8,9 +8,9 @@
 #include "lst.h"
 
 struct retained_t * new_bag() {
-	struct retained_t * bagpack = /** @todo */; // allocation dynamique d'un struct retained_t
+	struct retained_t * bagpack = NULL /** @todo */; // allocation dynamique d'un struct retained_t
 	assert(bagpack);
-	bagpack->objects_list = /** @todo */; // à demander au prof
+	bagpack->objects_list = NULL /** @todo */; // allocation dynamique d'une liste (dans lst.h)
 	assert(bagpack->objects_list);
 	return bagpack;
 }
@@ -25,13 +25,13 @@ void bagcpy(struct retained_t * duplicata, const struct retained_t * bagpack) {
 
 // =======================================================================
 
-void free_bag(struct retained_t * bagpack) {
+void free_bag(struct retained_t ** bagpack) {
 	assert(bagpack);
 	/** @todo **/
 
 
-	bagpack.utilities_sum = 0;
-	free (*bagpack);
+	(*bagpack)->utilities_sum = 0;
+	free (bagpack);
 	(*bagpack) = NULL;
 	// libérer un à un les éléments de objects_list et mettre utilities_sum à 0, puis libérer le bagpack, enfin faire pointer le pointeur à NULL
 }
@@ -42,7 +42,7 @@ void clean_bag(struct retained_t * bagpack) {
 	assert(bagpack);
 	/** @todo **/
 
-	bagpack.utilities_sum = 0;
+	bagpack->utilities_sum = 0;
 	// enlever tous les éléments de objects_list en mettant les pointeurs à NULL un à un, et mettre la somme des utilités à 0
 }
 
@@ -54,7 +54,7 @@ void push_object_in_bag(struct retained_t * bagpack, struct object_t * ptr_objec
 	assert(bagpack && ptr_object);
 	
 	//ajoute l'utilité de l'objet a l'utilité exitante du sac
-	bagpack.utilities_sum += ptr_object.utility ;
+	bagpack->utilities_sum += ptr_object->utility ;
 
 }
 

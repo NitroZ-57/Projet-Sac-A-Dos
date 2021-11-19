@@ -43,7 +43,7 @@ int main(int argc, char **argv) {
 		} else {
 			//dp_list(Vmax, object_set); @todo
 		}
-		// libérer mémoire prise par object_set
+		free_object_set(&object_set);
 		return EXIT_SUCCESS;
 	}
 	return EXIT_FAILURE;
