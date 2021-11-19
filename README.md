@@ -48,9 +48,9 @@ Pour lancer le programme un fait appel au fichier executable (éxecuter par le m
 ## TODO
 - [X] : Faire les fonctions pour le sac dans `objects.h` et `objects.c`
 - [ ] : Faire les fonctions dont dépendent les fonctions récursives `dep_rec.h` et `dep_rec.c`
-- [ ] : Faire la fonction récursive `rec.h` et `rec.h`
+- x] : Faire la fonction récursive `rec.h` et `rec.c`
 - [ ] : Faire les fonctions dont dépendent les fonctions de tableau dynamique statique `dep_array.h` et `dep_array.c`
-- [ ] : Faire la fonction de tableau dynamique statique `array.h` et `array.h`
+- [ ] : Faire la fonction de tableau dynamique statique `array.h` et `array.c`
 
 --------------------------------------------------
 
@@ -102,20 +102,20 @@ Ces fichiers contiennent la fonction tableau dynamique statique, étape 2 du pro
 | NOM FONCTION  | NOM FICHIER | LIGNE .h | UTILITÉ | ETAT |
 |:---------|:---------|:---------|:---------|:---------|
 |`array()`|*array*|16|cherche la meilleure solution pour le sac et l'affiche|prof|
-|`free_states_array()`|*dp_array*|18|libère la mémoire de la matrice d'état|a faire|
-|`new_states_array()`|*dp_array*|29|crée une matrice d'état initialisée a 0|a faire|
-|`push_object_in_array()`|*dp_array*|40|ajoute un objet valide dans la matrice d'état|a faire|
+|`free_states_array()`|*dp_array*|18|libère la mémoire de la matrice d'état|à faire|
+|`new_states_array()`|*dp_array*|29|crée une matrice d'état initialisée a 0|à faire|
+|`push_object_in_array()`|*dp_array*|40|ajoute un objet valide dans la matrice d'état|à faire|
 |`view_path_array()`|*dp_array*|50|affiche la meilleure solution optimiser|prof|
 |`view_opt()`|*dp_array*|59|affiche la matrice d'état|prof|
 |`view_chm()`|*dp_array*|68|affiche "the path" de la matrice d'état|prof|
-|`ìnit_opt_chm()`|*dp_array_*|131 (fichier c)|prout|a faire|
-|`new_bag()`|*dp_rec*|20|crée un nouveau sac et l'initialise a 0|a faire|
+|`ìnit_opt_chm()`|*dp_array_*|131 (fichier c)|prout|à faire|
+|`new_bag()`|*dp_rec*|20|crée un nouveau sac et l'initialise a 0|à faire|
 |`bagcpy()`|*dp_rec*|30|copie un sac dans un autre|prof|
-|`free_bag()`|*dp_rec*|39|libère la mémoire d'un sac|a faire|
-|`clean_bag()`|*dp_rec*|48|enlève tout les objet du sac|a faire|
-|`push_object_in_bag()`|*dp_rec*|58|ajoute un objet au sac|a faire|
+|`free_bag()`|*dp_rec*|39|libère la mémoire d'un sac|à faire|
+|`clean_bag()`|*dp_rec*|48|enlève tout les objet du sac|à faire|
+|`push_object_in_bag()`|*dp_rec*|58|ajoute un objet au sac|à faire|
 |`view_bagpack()`|*dp_rec*|68|affiche un sac|prof|
-|`new_objects()`|*objects*|39|crée un set d'objet|a testé|
+|`new_objects()`|*objects*|39|crée un set d'objet|à tester|
 |`view_object()`|*objects*|48|affiche un objet|prof|
 |`view_object_set()`|*objects*|57|affiche un set d'objet|prof|
-|`rec()`|*rec*|16|fonction pour recursive = trouve meilleure solution et affiche a chaque appel|a faire|
+|`rec()`|*rec*|16|fonction pour recursive = trouve meilleure solution et affiche a chaque appel|à tester|

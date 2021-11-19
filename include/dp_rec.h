@@ -1,5 +1,7 @@
 #pragma once
 
+#include "objects.h"
+
 /**
  * @brief the structure with all the objects in a retained bag, with their utility sum
  * 

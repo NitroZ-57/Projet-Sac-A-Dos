@@ -1,10 +1,11 @@
-#include "lst.h"
-#include "lst_elm.h"
-
 #include <stdlib.h> 
 #include <stdio.h> 
 #include <stdbool.h> 
 #include <assert.h> 
+#include "global.h"
+#include "lst.h"
+#include "lst_elm.h"
+
 
 
 

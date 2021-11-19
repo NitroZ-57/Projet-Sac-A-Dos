@@ -2,6 +2,9 @@
 #include <stdlib.h>
 #include <stdbool.h>
 #include "global.h"
+#include "objects.h"
+#include "rec.h"
+#include "array.h"
 
 
 int main(int argc, char **argv) {
@@ -38,7 +41,7 @@ int main(int argc, char **argv) {
 		} else if(mode == 'A') {
 			array(utility, Vmax, object_set);
 		} else {
-			dp_list(Vmax, object_set);
+			//dp_list(Vmax, object_set); @todo
 		}
 		// libérer mémoire prise par object_set
 		return EXIT_SUCCESS;

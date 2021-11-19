@@ -2,6 +2,7 @@
 
 #include <stdbool.h>
 #include "dp_array.h"
+#include "objects.h"
 
 // =======================================================================
 

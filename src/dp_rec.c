@@ -2,9 +2,10 @@
 #include <stdlib.h>
 #include <stdbool.h>
 #include <assert.h>
+#include "global.h"
 #include "dp_rec.h"
 #include "objects.h"
-
+#include "lst.h"
 
 struct retained_t * new_bag() {
 	struct retained_t * bagpack = /** @todo */; // allocation dynamique d'un struct retained_t

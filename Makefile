@@ -10,10 +10,10 @@ LFLAGS = -lm
 _PROG = sac_a_dos
 PROG = $(patsubst %,$(BDIR)/%,$(_PROG))
 
-_DEP = global.h objects.h rec.h dp_rec.h array.h dp_array.h
+_DEP = global.h objects.h rec.h dp_rec.h array.h dp_array.h lst.h lst_elm.h
 DEP = $(patsubst %,$(IDIR)/%,$(_DEP))
 
-_OBJ = main.o objects.o rec.o dp_rec.o array.o dp_array.o
+_OBJ = main.o objects.o rec.o dp_rec.o array.o dp_array.o lst.o lst_elm.o
 OBJ = $(patsubst %,$(ODIR)/%,$(_OBJ))
 
 .PHONY: run dirs clean delete

@@ -1,14 +1,15 @@
-#pragma once
+#ifndef INFTY
+#define INFTY -1
+#endif
 
-#ifndef _GLOBAL_
-#define _GLOBAL_
+#ifndef UNDTR
+#define UNDTR -2
+#endif
 
-// inclusion of all the files necessary for the main file
+#ifndef _TRACE_
+#define _TRACE_
+#endif
 
-#include "objects.h"
-#include "rec.h"
-#include "array.h"
-
-#define _TRACE_ 
-
+#ifndef _DEBUG_
+#define _DEBUG_
 #endif

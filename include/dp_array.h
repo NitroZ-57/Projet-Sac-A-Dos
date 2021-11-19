@@ -1,5 +1,7 @@
 #pragma once
 
+#include "objects.h"
+
 typedef int state_t;
 
 struct states_array_t {
