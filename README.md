@@ -48,7 +48,7 @@ Pour lancer le programme un fait appel au fichier executable (éxecuter par le m
 ## TODO
 - [X] : Faire les fonctions pour le sac dans `objects.h` et `objects.c`
 - [ ] : Faire les fonctions dont dépendent les fonctions récursives `dep_rec.h` et `dep_rec.c`
-- x] : Faire la fonction récursive `rec.h` et `rec.c`
+- [x] : Faire la fonction récursive `rec.h` et `rec.c`
 - [ ] : Faire les fonctions dont dépendent les fonctions de tableau dynamique statique `dep_array.h` et `dep_array.c`
 - [ ] : Faire la fonction de tableau dynamique statique `array.h` et `array.c`
 
