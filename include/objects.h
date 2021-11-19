@@ -55,3 +55,12 @@ void view_object(const struct object_t * object);
  * @param set the set to show
  */
 void view_objet_set(const struct objects_t * set);
+
+// =======================================================================
+
+/**
+ * @brief Free a object set and all 
+ * 
+ * @param set 
+ */
+void free_object_set(struct objects_t ** set);
