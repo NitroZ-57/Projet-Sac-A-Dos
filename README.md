@@ -102,13 +102,13 @@ Ces fichiers contiennent la fonction matrice d'états, étape 2 du projet.
 | NOM FONCTION  | NOM FICHIER | LIGNE .h | UTILITÉ | ETAT |
 |:---------|:---------|:---------|:---------|:---------|
 |`array()`|*array*|16|cherche la meilleure solution pour le sac et l'affiche|prof|
-|`free_states_array()`|*dp_array*|18|libère la mémoire de la matrice d'état|à faire|
-|`new_states_array()`|*dp_array*|29|crée une matrice d'état initialisée a 0|à faire|
+|`free_states_array()`|*dp_array*|18|libère la mémoire de la matrice d'état|à tester|
+|`new_states_array()`|*dp_array*|29|crée une matrice d'état initialisée a 0|à tester|
 |`push_object_in_array()`|*dp_array*|40|ajoute un objet valide dans la matrice d'état|à faire|
 |`view_path_array()`|*dp_array*|50|affiche la meilleure solution optimiser|prof|
 |`view_opt()`|*dp_array*|59|affiche la matrice d'état|prof|
 |`view_chm()`|*dp_array*|68|affiche "the path" de la matrice d'état|prof|
-|`ìnit_opt_chm()`|*dp_array*|131 (fichier c)|initialise le chemin de la matrice d'état|à faire|
+|`ìnit_opt_chm()`|*dp_array*|131 (fichier c)|initialise le chemin de la matrice d'état|à tester|
 |`new_bag()`|*dp_rec*|20|crée un nouveau sac et l'initialise a 0|à faire|
 |`bagcpy()`|*dp_rec*|30|copie un sac dans un autre|prof|
 |`free_bag()`|*dp_rec*|39|libère la mémoire d'un sac|à faire|
@@ -118,4 +118,5 @@ Ces fichiers contiennent la fonction matrice d'états, étape 2 du projet.
 |`new_objects()`|*objects*|39|crée un set d'objet|à tester|
 |`view_object()`|*objects*|48|affiche un objet|prof|
 |`view_object_set()`|*objects*|57|affiche un set d'objet|prof|
+|`free_object_set()`|*objects*|66|libère la mémoire de l'ensemble d'objets|à tester|
 |`rec()`|*rec*|16|fonction pour recursive = trouve meilleure solution et affiche a chaque appel|à tester|
