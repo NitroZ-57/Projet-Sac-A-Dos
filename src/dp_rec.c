@@ -58,7 +58,7 @@ void push_object_in_bag(struct retained_t * bagpack, struct object_t * ptr_objec
 	assert(bagpack && ptr_object);
 
 	//ajoute l'objet a la suite de la liste
-	cons( bagpack->objects_list ; ptr_object );
+	cons( bagpack->objects_list , ptr_object );
 	
 	//ajoute l'utilité de l'objet a l'utilité exitante du sac
 	bagpack->utilities_sum += ptr_object->utility ;
