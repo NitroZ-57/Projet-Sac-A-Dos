@@ -26,14 +26,15 @@ void bagcpy(struct retained_t * duplicata, const struct retained_t * bagpack) {
 // =======================================================================
 
 void free_bag(struct retained_t ** bagpack) {
-	assert(bagpack);
-	/** @todo **/
+	assert(*bagpack);
+	//supprime la liste d'objet
+	del_list( &( * bagpack)->objects_list, &free_object);
 
+	// libère le bagpack
+	free (*bagpack);
 
-	(*bagpack)->utilities_sum = 0;
-	free (bagpack);
+	//le pointeur du pointeur a NULL
 	(*bagpack) = NULL;
-	// libérer un à un les éléments de objects_list et mettre utilities_sum à 0, puis libérer le bagpack, enfin faire pointer le pointeur à NULL
 }
 
 // =======================================================================
@@ -47,8 +48,8 @@ void clean_bag(struct retained_t * bagpack) {
 	//new list ds list de la struct
 	bagpack->objects_list = new_list() ;
 
+	//met la somme des utilité a 0
 	bagpack->utilities_sum = 0;
-	// enlever tous les éléments de objects_list en mettant les pointeurs à NULL un à un, et mettre la somme des utilités à 0
 }
 
 // =======================================================================
@@ -58,7 +59,7 @@ void push_object_in_bag(struct retained_t * bagpack, struct object_t * ptr_objec
 	//dans objet.h
 	/*on veux ajouter objet dans bagpack
 	cons list; datum = object.volume
-	//ajoute l'objet a la suite de la liste objects_list*/&
+	//ajoute l'objet a la suite de la liste objects_list*/
 	assert(bagpack && ptr_object);
 	
 	//ajoute l'utilité de l'objet a l'utilité exitante du sac
