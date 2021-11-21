@@ -42,11 +42,10 @@ void clean_bag(struct retained_t * bagpack) {
 	assert(bagpack);
 	
 	//suppression de la liste
-	bagpack->objects_list = del_list( ** bagpack->objects_list, &free_object );
+	del_list( &bagpack->objects_list, &free_object );
 
 	//new list ds list de la struct
 	bagpack->objects_list = new_list() ;
-
 
 	bagpack->utilities_sum = 0;
 	// enlever tous les éléments de objects_list en mettant les pointeurs à NULL un à un, et mettre la somme des utilités à 0
