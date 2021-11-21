@@ -48,12 +48,18 @@ void view_objet_set(const struct objects_t * set) {
 
 // =======================================================================
 
+void free_object(struct object_t ** obj) {
+    free((*obj));
+    (*obj) = NULL;
+}
+
+// =======================================================================
+
 void free_object_set(struct objects_t ** set) {
     assert(*set && set);
 
-    free((*set)->objects);
+    free_object(&(*set)->objects);
     free(*set);
 
     (*set) = NULL;
-
 }

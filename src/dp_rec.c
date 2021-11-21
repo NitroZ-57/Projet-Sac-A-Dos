@@ -7,7 +7,7 @@
 #include "objects.h"
 #include "lst.h"
 
-struct retained_t * new_bag() {
+struct retained_t * new_bag() { 
 	struct retained_t * bagpack = NULL /** @todo */; // allocation dynamique d'un struct retained_t
 	assert(bagpack);
 	bagpack->objects_list = NULL /** @todo */; // allocation dynamique d'une liste (dans lst.h)

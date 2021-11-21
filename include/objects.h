@@ -59,8 +59,17 @@ void view_objet_set(const struct objects_t * set);
 // =======================================================================
 
 /**
- * @brief Free a object set and all 
+ * @brief Free a object 
  * 
- * @param set 
+ * @param obj the object to free
+ */
+void free_object(struct object_t ** obj);
+
+// =======================================================================
+
+/**
+ * @brief Free an object set  
+ * 
+ * @param set the set to free
  */
 void free_object_set(struct objects_t ** set);
