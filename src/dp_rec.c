@@ -40,9 +40,12 @@ void free_bag(struct retained_t ** bagpack) {
 
 void clean_bag(struct retained_t * bagpack) {
 	assert(bagpack);
-	/** @todo **/
-	//dell list
+	
+	//suppression de la liste
+	bagpack->objects_list = del_list( ** bagpack->objects_list, &free_object );
+
 	//new list ds list de la struct
+	bagpack->objects_list = new_list() ;
 
 
 	bagpack->utilities_sum = 0;
@@ -56,7 +59,7 @@ void push_object_in_bag(struct retained_t * bagpack, struct object_t * ptr_objec
 	//dans objet.h
 	/*on veux ajouter objet dans bagpack
 	cons list; datum = object.volume
-	//ajoute l'objet a la suite de la liste objects_list*/
+	//ajoute l'objet a la suite de la liste objects_list*/&
 	assert(bagpack && ptr_object);
 	
 	//ajoute l'utilité de l'objet a l'utilité exitante du sac
