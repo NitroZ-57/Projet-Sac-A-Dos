@@ -8,9 +8,9 @@
 #include "lst.h"
 
 struct retained_t * new_bag() {
-	struct retained_t * bagpack = NULL /** @todo */; // allocation dynamique d'un struct retained_t
+	struct retained_t * bagpack = ( struct retained_t *) calloc (1, sizeof ( struct retained_t) ); // allocation dynamique d'un struct retained_t
 	assert(bagpack);
-	bagpack->objects_list = NULL /** @todo */; // allocation dynamique d'une liste (dans lst.h)
+	bagpack->objects_list = new_list(); // allocation dynamique d'une liste (dans lst.h)
 	assert(bagpack->objects_list);
 	return bagpack;
 }
