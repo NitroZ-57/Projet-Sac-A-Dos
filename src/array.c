@@ -25,7 +25,7 @@ void array(const bool utility, const int Vmax, const struct objects_t * objects)
             view_chm(states);
         #endif
     }
-    view_path_array(states, objects);printf("okkkk");
+    view_path_array(states, objects);
     free_states_array(&states);
     
 }
