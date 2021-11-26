@@ -46,7 +46,7 @@ void push_object_in_array(struct states_array_t * states, const struct objects_t
  		// Identifier cet état pour l'étape précédente (i-1)
  		// Identifier cet état pour l'étape courante (i)
     int pred = (i-1) * states->Vmax + bag; // valeur à la même colonne et la ligne du dessus
-    int curr = pred = i * states->Vmax + bag; // valeur à la même colonne et même ligne
+    int curr = i * states->Vmax + bag; // valeur à la même colonne et même ligne
     int OPT1 = set->objects[curr].utility;
     states->CHM[curr] = INFTY; //hyp.: l'object i n'est pas dans le sac
     if( bag >= set->objects.volume ) { // Il faut s'assurer qu'il y a de la place dans le sac
