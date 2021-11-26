@@ -45,8 +45,8 @@ void push_object_in_array(struct states_array_t * states, const struct objects_t
  		// Pour l'objet courant (i-1), parcourir chaque état du sac-à-dos
  		// Identifier cet état pour l'étape précédente (i-1)
  		// Identifier cet état pour l'étape courante (i)
-    int pred = 0/** @todo */; // valeur à la même colonne et la ligne du dessus
-    int curr = 0/** @todo */; // valeur à la même colonne et même ligne
+    int pred = (i-1) * states->Vmax + bag; // valeur à la même colonne et la ligne du dessus
+    int curr = pred = (i-1) * states->Vmax + bag; // valeur à la même colonne et même ligne
     int OPT1 = states->OPT[pred];
     states->CHM[curr] = INFTY; //hyp.: l'object i n'est pas dans le sac
     if(0/** @todo */) { // Il faut s'assurer qu'il y a de la place dans le sac
