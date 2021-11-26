@@ -47,19 +47,19 @@ Pour lancer le programme un fait appel au fichier executable (éxecuter par le m
 
 ## TODO
 - [X] : Faire les fonctions pour le sac dans `objects.h` et `objects.c`
-- [ ] : Faire les fonctions dont dépendent les fonctions récursives `dep_rec.h` et `dep_rec.c`
+- [X] : Faire les fonctions dont dépendent les fonctions récursives `dep_rec.h` et `dep_rec.c`
 - [x] : Faire la fonction récursive `rec.h` et `rec.c`
 - [X] : Faire les fonctions dont dépendent les fonctions de matrice d'états `dep_array.h` et `dep_array.c`
-- [ ] : Faire la fonction de matrice d'états `push_object_in_array()` dans `dp_array.h` et `dp_array.c`
+- [X] : Faire la fonction de matrice d'états `push_object_in_array()` dans `dp_array.h` et `dp_array.c`
 
 --------------------------------------------------
 
 ## TO TEST
-- [ ] : Tester les fonctions pour le sac dans `objects.h` et `objects.c`
+- [X] : Tester les fonctions pour le sac dans `objects.h` et `objects.c`
 - [ ] : Tester les fonctions dont dépendent les fonctions récursives `dep_rec.h` et `dep_rec.c`
 - [ ] : Tester la fonction récursive `rec.h` et `rec.h`
-- [ ] : Tester les fonctions dont dépendent les fonctions de matrice d'états `dep_array.h` et `dep_array.c`
-- [ ] : Tester la fonction de matrice d'états `array.h` et `array.h`
+- [X] : Tester les fonctions dont dépendent les fonctions de matrice d'états `dep_array.h` et `dep_array.c`
+- [X] : Tester la fonction de matrice d'états `array.h` et `array.h`
 
 --------------------------------------------------
 

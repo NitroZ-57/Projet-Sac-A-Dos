@@ -21,30 +21,33 @@ int main(int argc, char **argv) {
 		fprintf(stderr, "\t* Vmax is for bag max volume\n");
 		fprintf(stderr, "\t* vol_i is for #i object's volume, i in {1, /** @todo */ , n}");
 		fprintf(stderr, "\t* use_i is for #i object's utility, i in {1, /** @todo */ , n}");
-		exit(-1);
-
-		const char mode = argv[1][0];
-		const bool utility = (atoi(argv[2]) == 0) ? false : true;
-		const int Vmax = atoi(argv[3]);
-		struct objects_t * object_set = new_objects(argc, argv, utility);
 		
-		#ifdef _TRACE_
-			fprintf(stderr, "mode=%c usefullness=%c Vmax=%d\n", mode, (utility)?'U':'N', Vmax);
-			fprintf(stderr, "Object set full with %d objects\n", object_set->nb_objects);
-			view_objet_set(object_set);
-		#endif
-		
-		if(mode == 'R') {
-			struct retained_t * my_bag = new_bag();
-			rec(Vmax, object_set, my_bag);
-			view_bagpack(my_bag, "Final selection");
-		} else if(mode == 'A') {
-			array(utility, Vmax, object_set);
-		} else {
-			//dp_list(Vmax, object_set); @todo
-		}
-		free_object_set(&object_set);
-		return EXIT_SUCCESS;
+		return EXIT_FAILURE;
 	}
-	return EXIT_FAILURE;
+
+	const char mode = argv[1][0];
+	const bool utility = (atoi(argv[2]) == 0) ? false : true;
+	const int Vmax = atoi(argv[3]);
+	struct objects_t * object_set = new_objects(argc, argv, utility);
+	
+	#ifdef _TRACE_
+		fprintf(stderr, "mode=%c usefullness=%c Vmax=%d\n", mode, (utility)?'U':'N', Vmax);
+		fprintf(stderr, "Object set full with %d objects\n", object_set->nb_objects);
+		view_objet_set(object_set);
+	#endif
+	
+	
+	if(mode == 'R') { 
+		struct retained_t * my_bag = new_bag(); 
+		rec(Vmax, object_set, my_bag);
+		view_bagpack(my_bag, "Final selection");
+	} else if(mode == 'A') {
+		array(utility, Vmax, object_set);
+	} else {
+		//dp_list(Vmax, object_set); @todo
+	}
+	free_object_set(&object_set);
+
+	return EXIT_SUCCESS;
+	
 }

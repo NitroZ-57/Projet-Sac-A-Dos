@@ -14,7 +14,7 @@ void rec(const int Vmax, struct objects_t * object_set, struct retained_t * bagp
 	struct retained_t * duplicata = new_bag(); // on créer un nouveau sac
 	bagcpy(duplicata, bagpack); // on copie le sac dans un duplicata
 	// Prediction : the bag utility before any new object put into it
-	int first = object_set->first_idx;
+	int first = object_set->first_idx; 
 	struct retained_t * best_bagpack = new_bag(); // on créer un nouveau sac
 	bagcpy(best_bagpack, bagpack); // le du début sac est le meilleur
 	// Verification by trying the other objects
