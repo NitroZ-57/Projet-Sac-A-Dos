@@ -59,7 +59,7 @@ void push_object_in_array(struct states_array_t * states, const struct objects_t
 				states->OPT[curr] = OPT2; //l'objet précédent est meilleur solution
 			}
     } else {
-        states->OPT[curr] = /*to do */ ; // on met la valeur qui se trouve dans pred
+        states->OPT[curr] = OPT1 ; // on met la valeur qui se trouve dans pred
     }
   }
 }
