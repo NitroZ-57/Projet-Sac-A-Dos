@@ -47,19 +47,19 @@ void push_object_in_array(struct states_array_t * states, const struct objects_t
  		// Identifier cet état pour l'étape courante (i)
     int pred = (i-1) * states->Vmax + bag; // valeur à la même colonne et la ligne du dessus
     int curr = i * states->Vmax + bag; // valeur à la même colonne et même ligne
-    int OPT1 = set->objects[curr].utility;
+    int OPT1 = set->objects[pred].utility;
     states->CHM[curr] = INFTY; //hyp.: l'object i n'est pas dans le sac
-    if( bag >= set->objects.volume ) { // Il faut s'assurer qu'il y a de la place dans le sac
+    if( bag >= set->objects[curr].volume ) { // Il faut s'assurer qu'il y a de la place dans le sac
       int pred_without_i = bag - set->objects[curr].volume; // volume - volume de l'objet courrant
 			int OPT2 = set->objects[curr].utility + set->objects[pred].utility - bag; // ligne du dessus et volume - volume de l'obejt courrant
 			if( OPT1 > OPT2 ) { // Sélectionne le max entre OPT1 et OPT2
 				states->OPT[curr] = OPT1; 
 				states->CHM[curr] = OPT1; // Noter que l'object i est dans le sac
 			} else {
-				states->OPT[curr] = OPT2;
+				states->OPT[curr] = OPT2; //l'objet précédent est meilleur solution
 			}
     } else {
-        states->OPT[curr] = OPT1; // on met la valeur qui se trouve dans pred
+        states->OPT[curr] = /*to do */ ; // on met la valeur qui se trouve dans pred
     }
   }
 }
