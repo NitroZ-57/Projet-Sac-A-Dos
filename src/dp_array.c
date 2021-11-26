@@ -49,9 +49,9 @@ void push_object_in_array(struct states_array_t * states, const struct objects_t
     int curr = pred = (i-1) * states->Vmax + bag; // valeur à la même colonne et même ligne
     int OPT1 = states->OPT[pred];
     states->CHM[curr] = INFTY; //hyp.: l'object i n'est pas dans le sac
-    if(0/** @todo */) { // Il faut s'assurer qu'il y a de la place dans le sac
-      int pred_without_i = 0/** @todo */; // volume - volume de l'objet courrant
-			int OPT2 = 0/** @todo */; // ligne du dessus et voolume - volume de l'obejt courrant
+    if( bag >= set->objects.volume ) { // Il faut s'assurer qu'il y a de la place dans le sac
+      int pred_without_i = bag - set->objects.volume; // volume - volume de l'objet courrant
+			int OPT2 = 0/** @todo */; // ligne du dessus et volume - volume de l'obejt courrant
 			if(0/** @todo */) { // Sélectionne le max entre OPT1 et OPT2
 				states->OPT[curr] = 0/** @todo */; 
 				states->CHM[curr] = 0/** @todo */; // Noter que l'object i est dans le sac
@@ -59,7 +59,7 @@ void push_object_in_array(struct states_array_t * states, const struct objects_t
 				states->OPT[curr] = 0/** @todo */;
 			}
     } else {
-        states->OPT[curr] = 0/** @todo */;
+        states->OPT[curr] = 0;
     }
   }
 }
