@@ -9,13 +9,11 @@
 
 
 
-void insert_after(struct list_t * L, void * datum, struct list_elm_t * place);
-
 
 // ======================================================================================================================================
 
 struct list_t * new_list() {
-    struct list_t * L = ( struct list_t *) calloc (1 , sizeof ( struct list_t ) );
+    struct list_t * L = calloc (1 , sizeof ( struct list_t ) );
     assert (L);
     return L;
 }
@@ -24,14 +22,14 @@ struct list_t * new_list() {
 
 void del_list(struct list_t ** ptrL, void (*ptrFct)() ) {
     assert ( ptrL && * ptrL );
-
     if( (*ptrFct) != NULL ) {
+        
         for ( struct list_elm_t * E = (* ptrL )->head ; E; ) {
             struct list_elm_t * T = E;
             E = E->suc;
-            (*ptrFct) (T->datum );
-            free(T);
+            del_list_elm(&T,ptrFct);
         }
+        
     } 
     else {
         for ( struct list_elm_t * E = (* ptrL )->head ; E; ) {
@@ -57,19 +55,16 @@ void cons(struct list_t * L, void * datum) {
 	struct list_elm_t * E = new_list_elm ( datum );
 	assert (E);
 	
-	E->suc = L->head ;
-	L->head = E;
-
+    E->suc = L->head;
+    L->head = E;
 	if(L->numelm == 0) 
 		L->tail = E;
-
 	L->numelm += 1;
 
 }
 
 // ======================================================================================================================================
 void view_list(struct list_t * L, void (* ptrFct)() ) {
-
 	printf( "[ " );
 	for( struct list_elm_t * E = L->head; E; E = E->suc) {
 		(*ptrFct)(E->datum);
@@ -82,11 +77,14 @@ void view_list(struct list_t * L, void (* ptrFct)() ) {
 
 void queue ( struct list_t * L , void * datum ) {
     assert(L);
-
-	struct list_elm_t *new_tail = new_list_elm(datum);
-	L->tail->suc = new_tail;
-
-    L->numelm += 1;
+    if(empty_list(L)){
+        cons(L,datum);
+    } else{
+        struct list_elm_t *new_tail = new_list_elm(datum);
+        L->tail->suc = new_tail;
+        L->tail = new_tail;
+        L->numelm += 1;
+    }
 }
 
 // ======================================================================================================================================
@@ -155,7 +153,7 @@ int setNumelm ( struct list_t * L , int numElm ) {
 // ======================================================================================================================================
 
 void insert_after(struct list_t * L, void * datum, struct list_elm_t * place) {
-    assert(L && place);
+    assert(L);
     if(place == NULL) 
         cons(L, datum);
     else {
@@ -170,7 +168,7 @@ void insert_after(struct list_t * L, void * datum, struct list_elm_t * place) {
 struct list_t * listcpy(struct list_t *l) {
 
     struct list_t * lst = new_list();
-    lst->numelm = 0;
+    //lst->numelm = 0;
 
 	for( struct list_elm_t * E = l->head; E; E = E->suc) {
 		queue(lst, E->datum);

@@ -23,6 +23,7 @@ void free_states_array(struct states_array_t ** states) {
 	free(*states); // on libère la structure des informations de la structure d'état
 	(*states) = NULL; // on fait pointer le pointeur vers rien
 
+	// La libération de CHM ne fonctionne pas aucune idée de pourquoi
 }
 
 // =======================================================================

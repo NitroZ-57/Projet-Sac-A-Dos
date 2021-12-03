@@ -45,3 +45,5 @@ int setNumelm ( struct list_t * L , int numElm );
 void view_list ( struct list_t * L , void (* ptrFct ) () );
 /** @brief Fait une copie la liste passée en paramètre et la retourne */
 struct list_t * listcpy(struct list_t * l);
+
+void insert_after(struct list_t * L, void * datum, struct list_elm_t * place);

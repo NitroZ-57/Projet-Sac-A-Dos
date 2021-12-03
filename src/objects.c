@@ -26,6 +26,7 @@ struct objects_t * new_objects(const int argc, char ** argv, bool utility) {
             set->objects[i-3].utility = atoi(argv[i]);
         }
     }
+    set->first_idx = 0;
     return set;
 }
 
@@ -49,6 +50,7 @@ void view_objet_set(const struct objects_t * set) {
 // =======================================================================
 
 void free_object(struct object_t ** obj) {
+    assert(obj && *obj);
     free((*obj));
     (*obj) = NULL;
 }

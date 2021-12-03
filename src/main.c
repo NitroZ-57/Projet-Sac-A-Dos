@@ -41,6 +41,7 @@ int main(int argc, char **argv) {
 		struct retained_t * my_bag = new_bag(); 
 		rec(Vmax, object_set, my_bag);
 		view_bagpack(my_bag, "Final selection");
+		free_bag(&my_bag);
 	} else if(mode == 'A') {
 		array(utility, Vmax, object_set);
 	} else {

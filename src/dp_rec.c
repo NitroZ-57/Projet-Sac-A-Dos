@@ -17,10 +17,10 @@ struct retained_t * new_bag() {
 
 // =======================================================================
 
-void bagcpy(struct retained_t * duplicata, const struct retained_t * bagpack) {
-	assert(duplicata && bagpack);
-	duplicata->objects_list = listcpy(bagpack->objects_list);
-	duplicata->utilities_sum = bagpack->utilities_sum;
+void bagcpy(struct retained_t * newbagpack, const struct retained_t * bagpack) {
+	assert(newbagpack && bagpack);
+	newbagpack->objects_list = listcpy(bagpack->objects_list);
+	newbagpack->utilities_sum = bagpack->utilities_sum;
 }
 
 // =======================================================================
@@ -28,8 +28,7 @@ void bagcpy(struct retained_t * duplicata, const struct retained_t * bagpack) {
 void free_bag(struct retained_t ** bagpack) {
 	assert(*bagpack);
 	//supprime la liste d'objet
-	del_list( &( * bagpack)->objects_list, &free_object );
-
+	del_list( &((*bagpack)->objects_list), &free_object );
 	// libère le bagpack
 	free (*bagpack);
 

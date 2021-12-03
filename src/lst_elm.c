@@ -37,7 +37,7 @@ void * getDatum ( struct list_elm_t * E ) { /** @todo */
 
 // ======================================================================================================================================
 
-void del_list_elm_t(struct list_elm_t ** ptrE, void (* ptrFct ) ()) { 
+void del_list_elm(struct list_elm_t ** ptrE, void (* ptrFct ) ()) { 
     assert ( ptrE && * ptrE );
 
     free (*ptrE);
@@ -48,11 +48,10 @@ void del_list_elm_t(struct list_elm_t ** ptrE, void (* ptrFct ) ()) {
 // ======================================================================================================================================
 
 struct list_elm_t * new_list_elm( void * datum) { 
-    struct list_elm_t * E = ( struct list_elm_t *) calloc (1 , sizeof( struct list_elm_t ) );
+    struct list_elm_t * E = calloc (1 , sizeof( struct list_elm_t ) );
     assert(E);
     E->datum = datum;
     return E;
-
 }
 
 
