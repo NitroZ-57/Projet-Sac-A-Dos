@@ -21,44 +21,22 @@ Pour lancer le programme un fait appel au fichier executable (éxecuter par le m
 
 --------------------------------------------------
 
-## Question au prof
-1. Pour les objets est-ce que l'on doit faire des variables dynamiques ?
-**répondu : oui**  
-
-2. Dans les boucles pour dans la fonction pour créer les objets, doit-on commencer par 4 plutot que 3 pour commencer à ranger les objets car 0 est le nom de la fonction, 1 la méthode à effectuer, 2 si on a ou non une utilité et le 3 le volume maximum du sac ?  
-**répondu : il faut mettre à 4**  
-
-3. Dans la fonction pour la matrice d'état `array()` doit-on la modifier ? Ou on doit uniquement faire les fonctions annexes ?  
-**répondu : Pas besoin de modifier seulement les fonctions annexes**
-
-4. Où doit-on libérer la mémoire des `object_t`et `objects_t` on doit faire la fonction nous même ?  
-**répondu : libérer les objects à la fin du main c'est à nous de faire les fonctions de libération dans `object.c`**
-
-5. A quoi correspond le type `struct list_t *` dans le type `struct retained_t`?  Car il est déclaré nulle part. Est-ce que c'est pas plutôt `objects_t`?    
-**répondu : c'est à nous de faire les listes**
-
-6. C'est quoi `listcpy()`utilisé dans `bagcpy()` ? Elle est déclaré nulle part ? Et pareil pour `view_list()` utilisé dans `view_bagpack()` ?  
-**répondu : à nous de faire aussi**
-
-7. Les constantes `UNDTR`et `INFTY` ne sont pas définies où sont elles ?  
-**répondu : il faut mettre dans `global.h` elles sont sur arche** 
-
---------------------------------------------------
-
 ## TODO
 - [X] : Faire les fonctions pour le sac dans `objects.h` et `objects.c`
 - [X] : Faire les fonctions dont dépendent les fonctions récursives `dep_rec.h` et `dep_rec.c`
 - [x] : Faire la fonction récursive `rec.h` et `rec.c`
 - [X] : Faire les fonctions dont dépendent les fonctions de matrice d'états `dep_array.h` et `dep_array.c`
-- [X] : Faire la fonction de matrice d'états `push_object_in_array()` dans `dp_array.h` et `dp_array.c`
+- [X] : Faire la fonction de matrice d'états `push_object_in_array()` dans `dp_array.h` et `dp_array.c  
+
+- [ ] : Refaire tout le tableau des fonctions
 
 --------------------------------------------------
 
 ## TO TEST
 - [X] : Tester les fonctions pour le sac dans `objects.h` et `objects.c`
-- [ ] : Tester les fonctions dont dépendent les fonctions récursives `dep_rec.h` et `dep_rec.c`
-- [ ] : Tester la fonction récursive `rec.h` et `rec.h`
-- [X] : Tester les fonctions dont dépendent les fonctions de matrice d'états `dep_array.h` et `dep_array.c`
+- [X] : Tester les fonctions dont dépendent les fonctions récursives `dep_rec.h` et `dep_rec.c`
+- [X] : Tester la fonction récursive `rec.h` et `rec.h`
+- [ ] : Tester les fonctions dont dépendent les fonctions de matrice d'états `dep_array.h` et `dep_array.c`
 - [X] : Tester la fonction de matrice d'états `array.h` et `array.h`
 
 --------------------------------------------------
@@ -78,7 +56,7 @@ Commandes :
 La fonction main ne doit pas être touché, on peut faire une autre fonction main à coté pour faire nos tests  
 
 ### Fichier global.h
-Ce fichier n'est pas à modifier il permet d'inclure tous les fichiers dont la fonction main aura besoin  
+Ce fichier n'est pas à modifier il permet d'inclure toutes les constantes pour faire le programme
 
 ### Fichiers objects.c et objects.h
 Ces fichiers contiennent toutes les fonctions utilitaire sur le sac à dos. Le fichier h sera inclu dans presque tous les fichiers  
@@ -94,6 +72,12 @@ Ces fichiers contiennent toutes les fonctions utilitaire pour la version matrice
 
 ### Fichiers array.c et array.h
 Ces fichiers contiennent la fonction matrice d'états, étape 2 du projet.  
+
+### Fichiers lst.c et lst.h
+Ces fichiers servent à utiliser les listes génériques simplement chaînées pour la version récursive et pour la version avec les listes 
+
+### Fichiers lst_elm.c et lst_elm.h
+Ces fichiers servent pour les fichiers *lst.c* et *lst.h*
 
 ---------------------------------------------------------
 

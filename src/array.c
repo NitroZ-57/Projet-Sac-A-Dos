@@ -10,7 +10,7 @@
 
 void array(const bool utility, const int Vmax, const struct objects_t * objects) {
     struct states_array_t * states = new_states_array(objects->nb_objects, Vmax);
-    assert(states != NULL);
+    assert(states);
     #ifdef _TRACE_
         view_opt(states);
     #endif
@@ -25,7 +25,6 @@ void array(const bool utility, const int Vmax, const struct objects_t * objects)
             view_chm(states);
         #endif
     }
-    view_path_array(states, objects);
+    view_path_array(states, objects); 
     free_states_array(&states);
-    
 }

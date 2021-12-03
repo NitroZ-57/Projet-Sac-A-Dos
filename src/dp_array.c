@@ -19,7 +19,10 @@ void free_states_array(struct states_array_t ** states) {
 	assert(states && *states);
 
 	free((*states)->OPT); // on libère la mémoire de la matrice d'état
+
+	assert((*states)->CHM);
 	free((*states)->CHM); // on libère la mémoire du chemin de la matrice d'état
+
 	free(*states); // on libère la structure des informations de la structure d'état
 	(*states) = NULL; // on fait pointer le pointeur vers rien
 
@@ -29,7 +32,7 @@ void free_states_array(struct states_array_t ** states) {
 // =======================================================================
 
 struct states_array_t * new_states_array(const int num_objects, const int Vmax) { 
-	struct states_array_t * NS = (struct states_array_t *)calloc(1, sizeof(struct states_array_t)); // allocation dynamique d'une structure des informations de  matrice d'état
+	struct states_array_t * NS = calloc(1, sizeof(struct states_array_t)); // allocation dynamique d'une structure des informations de  matrice d'état
 	assert(NS != NULL);
 
 	NS->num_obj = num_objects; // on initialise le nombre d'objet
@@ -139,12 +142,12 @@ void view_chm(const struct states_array_t * states) {
 // =======================================================================
 
 void init_opt_chm(struct states_array_t * states) {
-    states->OPT = (state_t *)calloc(states->num_obj * states->Vmax, sizeof(state_t)); // on alloue dynamiquement la matrice d'état;
-    states->CHM = (state_t *)calloc(states->num_obj * states->Vmax, sizeof(state_t)); // on alloue dynamiquement les chemins de la matrice d'état
+    states->OPT = calloc((states->num_obj+1) * (states->Vmax+1), sizeof(state_t)); // on alloue dynamiquement la matrice d'état;
+    states->CHM = calloc((states->num_obj+1) * (states->Vmax+1), sizeof(state_t)); // on alloue dynamiquement les chemins de la matrice d'état
 
     for( int obj = 1; obj <= states->num_obj; obj += 1) {
         for(int bag = 0; bag <= states->Vmax; bag += 1) {
-            int idx = obj*states->Vmax + bag; // trouver l'indice de où enregistrer une valeur dans un vecteur à partir de deux indices (ligne, colonne) d'une matrice d'état
+            int idx = obj*(states->Vmax+1) + bag; // trouver l'indice de où enregistrer une valeur dans un vecteur à partir de deux indices (ligne, colonne) d'une matrice d'état
             states->OPT[idx] = UNDTR;
             states->CHM[idx] = UNDTR;
         }
