@@ -6,7 +6,7 @@ Un algorithme ayant pour but de ranger plusieurs objets donnés dans un sac. On 
 Pour se faire nous allons utiliser 3 approches différentes :   
 * Une récursive
 * Une utilisant des matrices d'états
-* Une utilisant des listes gérériques doublement chaîner 
+* Une utilisant des listes gérériques chaînées dynamique
 
 ------------------------------------------------------------------
 
@@ -78,6 +78,12 @@ Ces fichiers servent à utiliser les listes génériques simplement chaînées p
 
 ### Fichiers lst_elm.c et lst_elm.h
 Ces fichiers servent pour les fichiers *lst.c* et *lst.h*
+
+### Fichiers dyn.c et dyn.h
+Ces fichiers contiennent la fonction de listes gérériques chaînées dynamique, étape 3 du projet.   
+
+### Fichiers dp_dyn.c et dp_dyn.h
+Ces fichiers contiennent toutes les fonctions utilitaire pour la version listes gérériques chaînées dynamique. Le fichier h sera inclu dans *dyn.c* qui contient la fonction de listes gérériques chaînées dynamique.  
 
 ---------------------------------------------------------
 
