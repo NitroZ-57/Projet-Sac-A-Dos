@@ -25,7 +25,7 @@ void rec(const int Vmax, struct objects_t * object_set, struct retained_t * bagp
 		if(curr_volume >= 0) { // on vérifie si le nouveau volume est bien onferieur à celui maximal du sac
 			bagcpy(duplicata, bagpack); // on fait un nouveau duplicata 
 			push_object_in_bag(duplicata, ptr_object); // on ajoute le nouvel objet dans la liste
-			object_set->first_idx = first +1; // on passe à l'objet suivant 
+			object_set->first_idx = obj_idx +1; // on passe à l'objet suivant 
 			rec(curr_volume, object_set, duplicata); // on continue les appels récursifs avec le nouvel objet ajouté
 			if(duplicata->utilities_sum > best_bagpack->utilities_sum) { // on vérifie si l'utilité du nouveau sac est supérieur à l'ancien sac 
 				clean_bag(best_bagpack); // on enlève les éléments du meilleur sac
