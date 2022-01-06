@@ -45,6 +45,7 @@ int main(int argc, char **argv) {
 		array(utility, Vmax, object_set);
 	} else {
 		//dp_list(Vmax, object_set); @todo
+		printf("***\n\tCette partie n'a pas ete faite.\n");
 	}
 	free_object_set(&object_set);
 
