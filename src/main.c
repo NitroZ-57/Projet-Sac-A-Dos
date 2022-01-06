@@ -35,7 +35,7 @@ int main(int argc, char **argv) {
 		fprintf(stderr, "Object set full with %d objects\n", object_set->nb_objects);
 		view_objet_set(object_set);
 	#endif
-	
+	printf("ok");
 	
 	if(mode == 'R') { 
 		struct retained_t * my_bag = new_bag(); 

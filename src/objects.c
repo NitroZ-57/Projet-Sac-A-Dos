@@ -8,6 +8,7 @@
 // =======================================================================
 
 struct objects_t * new_objects(const int argc, char ** argv, bool utility) { 
+    printf("ok");
     struct objects_t * set = (struct objects_t*)calloc(1, sizeof(struct objects_t)); 
     assert(set);
     int i;
@@ -22,8 +23,8 @@ struct objects_t * new_objects(const int argc, char ** argv, bool utility) {
         }
     } else {
         for(i = 4; i < argc; i += 1) {
-        	set->objects[i-3].volume = atoi(argv[i]);
-            set->objects[i-3].utility = atoi(argv[i]);
+        	set->objects[i-4].volume = atoi(argv[i]);
+            set->objects[i-4].utility = atoi(argv[i]);
         }
     }
     set->first_idx = 0;
