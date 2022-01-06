@@ -8,7 +8,6 @@
 // =======================================================================
 
 struct objects_t * new_objects(const int argc, char ** argv, bool utility) { 
-    printf("ok");
     struct objects_t * set = (struct objects_t*)calloc(1, sizeof(struct objects_t)); 
     assert(set);
     int i;
